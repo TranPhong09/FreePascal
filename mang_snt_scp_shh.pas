@@ -10,7 +10,7 @@ uses crt ;
 function scp(n : integer): boolean ; 
  var x : integer ;
   begin 
-    x:= trunc(sqrt(x)); 
+    x:= trunc(sqrt(n)); 
     if sqr(x) = n then scp := true else scp := false ; 
   end; 
  function shh ( n : integer ): boolean ; 
@@ -35,11 +35,11 @@ begin
   assign(fo,'e:\freepascal\nhap.out.txt');
   rewrite(fo);
   for i := 1 to n do
-    begin 
     if snt(a[i]) = true then write(fo,'cac so nguyen to co trong mang la :',a[i],' ');
-    if scp(a[i]) = true then write(fo,' cac so chinh phuong co trong mang la :',a[i],' ');  
-    if chh(a[i] = true then write(fo,' cac so hoan hao co trong mang la :',a[i],' '); 
-end; 
+  for i := 1 to n do 
+     if scp(a[i]) = true then write(fo,' cac so chinh phuong co trong mang la :',a[i],' ');  
+   for i := 1 to n do 
+     if chh(a[i]) = true then write(fo,' cac so hoan hao co trong mang la :',a[i],' ');  
  close(fo);
 
  readln
